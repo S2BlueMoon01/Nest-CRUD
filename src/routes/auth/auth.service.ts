@@ -16,7 +16,7 @@ export class AuthService {
         data: {
           email: body.email,
           name: body.name,
-          description: body.description,
+          description: body?.description || '',
           password: hashedPassword,
         },
       });
